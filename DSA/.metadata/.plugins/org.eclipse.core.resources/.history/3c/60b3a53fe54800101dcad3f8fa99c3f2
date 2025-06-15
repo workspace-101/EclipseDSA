@@ -1,0 +1,26 @@
+package com.java.two_Array;
+
+import java.util.Scanner;
+
+public class Lecture_3 {
+
+	public static void main(String[] args) {
+		
+		swapping_Number_With_Third_Var();
+
+	}
+
+	private static void swapping_Number_With_Third_Var() {
+		Scanner cs=new Scanner(System.in);
+		System.out.println("Enter Two number for swapping");
+		int a=cs.nextInt();//a=10
+		int b=cs.nextInt();//b=5
+		System.out.println("Before swapping /n a : "+a+", b :"+b);
+		int c=a+b;
+		a=c-a;
+		b=c-b;
+		System.out.println("After swapping /n  a : "+a+", b : "+b);
+		
+	}
+
+}

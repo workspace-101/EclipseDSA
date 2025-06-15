@@ -1,0 +1,129 @@
+package com.java.two_Array;
+
+import java.util.Scanner;
+
+public class Lecture_3 {
+
+	public static void main(String[] args) {
+		
+		int arr[]=entering_Input_In_An_Array();
+		System.out.println("Old Array : ");
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i]+" ");
+		}
+		
+		// 1st-Method
+//		swapping_Number_With_Third_Var();		
+		
+		// 2nd-Method
+//		swapping_Number_Without_Third_Var();	
+		
+//		Reverse Array
+//		reverseArray(arr);
+		
+//		Rotate an Array by "K" Step
+		RotateArrayByKStep(arr);
+		
+
+	}
+
+private static int[] entering_Input_In_An_Array() {
+	Scanner cs=new Scanner(System.in);
+	System.out.println("Enter the length of array");
+	int len=cs.nextInt();
+	int arr[]=new int[len];
+	for(int i=0;i<len;i++) {
+		arr[i]=cs.nextInt();
+		
+	}
+	return arr;
+	}
+
+/*
+	private static void swapping_Number_With_Third_Var() {
+		Scanner cs=new Scanner(System.in);
+		System.out.println("Enter Two number for swapping");
+		int a=cs.nextInt();//a=10
+		int b=cs.nextInt();//b=5
+		System.out.println("Before swapping /n a : "+a+", b : "+b);
+		int c=a+b;
+		a=c-a;
+		b=c-b;
+		System.out.println("After swapping /n  a : "+a+", b : "+b);
+		
+	}
+*/
+
+	
+/*
+	private static void swapping_Number_Without_Third_Var() {
+		Scanner cs=new Scanner(System.in);
+		System.out.println("Enter Two number for swapping");
+		int a=cs.nextInt();//a=10
+		int b=cs.nextInt();//b=5
+		System.out.println("Before swapping /n a : "+a+", b : "+b);
+			b=b-a;
+			a=a+b;
+			b=a-b;
+			System.out.println("After swapping /n  a : "+a+", b : "+b);
+	}
+*/
+	
+/*
+	private static void reverseArray(int[] arr) {
+		int newarr[]=new int[arr.length];
+		System.out.print("Reverse Array : ");
+		for(int i=arr.length-1;i>=0;i--) {
+			int j=0;
+			newarr[j]=arr[i];
+			System.out.print(newarr[j]+",");
+			j--;
+			
+		}
+	}
+	
+	
+	*/
+
+//		Method - 1
+/*
+	private static void RotateArrayByKStep(int[] arr) {
+		System.out.println();
+		Scanner cs=new Scanner(System.in);
+		System.out.println("Enter the number for rotating an array");
+		int k=cs.nextInt();
+		int len=arr.length;
+		k=k%len;
+		int newarr[]=new int[len];
+		for(int i=0;i<k;i++) {
+			newarr[i]=arr[len-k+i];
+		}
+		for(int i=k;i<len;i++) {
+			newarr[i]=arr[i-k];
+			
+		}
+		System.out.println("Rotate Array...");
+		for(int i=0;i<len;i++) {
+			System.out.print(newarr[i]+" ");
+		}
+	}
+*/
+
+  	private static void RotateArrayByKStep(int[] arr) { // arr[]={1,2,3,4,5,6}
+		System.out.println();
+		Scanner cs=new Scanner(System.in);
+		System.out.println("Enter the number for rotating an array");
+		int k=cs.nextInt();
+		int len=arr.length;
+		k=k%len; // k=2%6, k=2;
+		int newarr[]=new int[len];
+		for(int i=0;i<k;i++) {
+			newarr[i]=arr[len-k+i]; //newarr[0]=arr[6-2+0]
+		}
+		for(int i=k;i<len;i++) {
+			newarr[i]=arr[i-k];
+		}
+		for(int i=0;i<len;i++) {
+			System.out.print(newarr[i]+" ");
+		}
+}}

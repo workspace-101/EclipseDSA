@@ -10,7 +10,9 @@ public class Lecture_4 {
 		for(int i=0;i<arr.length;i++) {
 			System.out.print(arr[i]+" ");
 		}
+		sorting_An_0_1_Array(arr);
 	}
+	
 	private static int[] entering_Input_In_An_Array() {
 		Scanner cs=new Scanner(System.in);
 		System.out.println("Enter the length of array");
@@ -23,5 +25,11 @@ public class Lecture_4 {
 		return arr;
 		}
 
-
+	private static void sorting_An_0_1_Array(int[] arr) {
+		int count=0;
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=0;
+			
+		}
+	}
 }
